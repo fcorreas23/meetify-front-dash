@@ -1,39 +1,30 @@
-import i18n from 'i18next';
-import {initReactI18next} from 'react-i18next';
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next';
+import Backend from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-import translationEN from '../locales/en/translation.json';
-import translationTR from '../locales/tr/translation.json';
-import translationDE from '../locales/de/translation.json';
-import translationES from '../locales/es/translation.json';
-import translationFR from '../locales/fr/translation.json';
-import translationPR from '../locales/pt/translation.json';
+import translationEN from '../locales/en/translation.json'
+import translationES from '../locales/es/translation.json'
+import translationPT from '../locales/pt/translation.json'
 
-// the translations
+
 const resources = {
-  en: {
-    translation: translationEN
-  },
-  tr: {
-    translation: translationTR
-  },
-  es: {
-    translation: translationES
-  },
-  fr: {
-    translation: translationFR
-  },
-  de: {
-    translation: translationDE
-  },
-  pt: {
-    translation: translationPR
-  }
-
-};
+    en: {
+        translation: translationEN
+    },
+    es: {
+        translation: translationES
+    },
+    pt: {
+        translation: translationPT
+    }
+}
 
 i18n
-  .use(initReactI18next as any) // passes i18n down to react-i18next
-  .init({
+.use(Backend)
+.use(LanguageDetector) // detect user language
+.use( initReactI18next as any )
+.init({
     resources,
     lng: 'en',
     interpolation: {
@@ -42,6 +33,7 @@ i18n
     react: {
       wait: true
     }
-  } as any);
+  } as any
+);
 
 export default i18n;

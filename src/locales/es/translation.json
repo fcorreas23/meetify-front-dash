@@ -1,25 +1,25 @@
 {
   "login": {
     "label": {
-      "signIn": "Sign in to start your session",
-      "rememberMe": "Remember Me",
-      "forgotPass": "I forgot my password",
-      "registerNew": "Register a new membership"
+      "signIn": "Iniciar tu sesión",
+      "rememberMe": "Recordarme",
+      "forgotPass": "Olvide mi contraseña",
+      "registerNew": "Registrar un nuevo usuario"
     },
     "button": {
       "signIn": {
-        "label": "Sign In",
+        "label": "Iniciar sesión",
         "social": "Sign in using {{what}}"
       },
       "signUp": {
-        "label": "Sign Up",
+        "label": "Registrate",
         "social": "Sign up using {{what}}"
       },
-      "signOut": "Sign Out"
+      "signOut": "Desconectar"
     }
   },
   "register": {
-    "alreadyHave": "I already have a membership",
+    "alreadyHave": "Ya tengo una supcripción",
     "registerNew": "Register a new membership",
     "label": "Register"
   },

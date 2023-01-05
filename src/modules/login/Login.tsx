@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
-import {useDispatch} from 'react-redux';
-import {Link, useNavigate} from 'react-router-dom';
-import {toast} from 'react-toastify';
-import {useFormik} from 'formik';
-import {useTranslation} from 'react-i18next';
-import {loginUser} from '@store/reducers/auth';
-import {setWindowClass} from '@app/utils/helpers';
-import {PfButton, PfCheckbox} from '@profabric/react-components';
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { useFormik } from 'formik';
+import { useTranslation } from 'react-i18next';
+import { loginUser } from '@store/reducers/auth';
+import { setWindowClass } from '@app/utils/helpers';
+import { PfButton, PfCheckbox } from '@profabric/react-components';
 
 import * as Yup from 'yup';
 
 import {Form, InputGroup} from 'react-bootstrap';
-import * as AuthService from '../../services/auth';
+import AuthService from '../../services/auth';
 
 const Login = () => {
   const [isAuthLoading, setAuthLoading] = useState(false);
@@ -22,23 +22,27 @@ const Login = () => {
 
   const login = async (email: string, password: string) => {
     try {
-      setAuthLoading(true);
-      const token = await AuthService.loginByAuth(email, password);
-      toast.success('Login is succeed!');
-      setAuthLoading(false);
-      dispatch(loginUser(token));
-      navigate('/');
+      //setAuthLoading(true);
+      const token = await AuthService.login( email, password );
+      console.log("Token: ", token);
+      /* const token = await AuthService.loginByAuth(email, password); */
+      //toast.success('Login is succeed!');
+      //setAuthLoading(false);
+      //dispatch(loginUser(token));
+      //navigate('/');
     } catch (error: any) {
+      console.log('ERROR1: ', error)
       setAuthLoading(false);
       toast.error(error.message || 'Failed');
     }
   };
 
-   const {handleChange, values, handleSubmit, touched, errors} = useFormik({
+  const { handleChange, values, handleSubmit, touched, errors } = useFormik({
     initialValues: {
       email: '',
       password: ''
     },
+
     validationSchema: Yup.object({
       email: Yup.string().email('Invalid email address').required('Required'),
       password: Yup.string()
@@ -46,8 +50,8 @@ const Login = () => {
         .max(30, 'Must be 30 characters or less')
         .required('Required')
     }),
+    
     onSubmit: (values) => {
-      console.log("Values:", values);
       login(values.email, values.password);
     }
   });

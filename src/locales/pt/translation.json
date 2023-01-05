@@ -1,64 +1,61 @@
 {
   "login": {
     "label": {
-      "signIn": "Sign in to start your session",
-      "rememberMe": "Remember Me",
-      "forgotPass": "I forgot my password",
-      "registerNew": "Register a new membership"
+      "signIn": "Faça login para iniciar sua sessão",
+      "rememberMe": "Lembre de mim",
+      "forgotPass": "Esqueci a minha senha",
+      "registerNew": "Registrar uma nova assinatura"
     },
     "button": {
       "signIn": {
-        "label": "Sign In",
-        "social": "Sign in using {{what}}"
+        "label": "Entrar",
+        "social": "Entrar usando {{what}}"
       },
       "signUp": {
-        "label": "Sign Up",
-        "social": "Sign up using {{what}}"
+        "label": "Inscrever-se",
+        "social": "Inscreva-se usando {{what}}"
       },
-      "signOut": "Sign Out"
+      "signOut": "Sair"
     }
   },
   "register": {
-    "alreadyHave": "I already have a membership",
-    "registerNew": "Register a new membership",
-    "label": "Register"
+    "alreadyHave": "Eu já tenho uma assinatura",
+    "registerNew": "Registrar uma nova assinatura",
+    "label": "Registro"
   },
   "recover": {
-    "forgotYourPassword": "You forgot your password? Here you can easily retrieve a new password.",
-    "oneStepAway": "You are only one step a way from your new password, recover your password now.",
-    "changePassword": "Change Password",
-    "requestNewPassword": "Request New Password"
+    "forgotYourPassword": "Você esqueceu sua senha? Aqui você pode facilmente recuperar uma nova senha.",
+    "oneStepAway": "Você está a apenas um passo de sua nova senha, recupere sua senha agora.",
+    "changePassword": "Mudar senha",
+    "requestNewPassword": "Requira nova senha"
   },
   "main": {
     "label": {
-      "moreInfo": "More info",
-      "follow": "Follow",
-      "aboutMe": "About Me",
-      "education": "Education",
-      "location": "Location",
-      "skills": "Skills",
-      "notes": "Notes",
-      "activity": "Activity",
-      "timeline": "Timeline",
-      "settings": "Settings"
+      "moreInfo": "Mais informações",
+      "follow": "Seguir",
+      "aboutMe": "Sobre mim",
+      "education": "Educação",
+      "location": "Localização",
+      "skills": "Habilidades",
+      "notes": "Notas",
+      "activity": "Atividade",
+      "timeline": "Linha do tempo",
+      "settings": "Configurações"
     }
   },
   "header": {
     "label": {
       "home": "Home",
-      "contact": "Contact"
+      "contact": "Contato"
     },
     "language": {
-      "turkish": "Turkish",
-      "english": "English",
-      "portuguese": "Portuguese",
-      "german": "German",
-      "french": "French",
-      "spanish": "Spanish"
+      "english": "Inglês",
+      "portuguese": "Português",
+      "spanish": "espanhola"
     },
     "messages": {
       "ago": "{{quantity}} {{unit}} Ago",
-      "seeAll": "See All Messages"
+      "seeAll": "Ver todas as mensagens"
     },
     "notifications": {
       "count": "{{quantity}} Notifications",
@@ -84,13 +81,13 @@
     }
   },
   "footer": {
-    "version": "Version",
-    "copyright": "All rights reserved."
+    "version": "Versão",
+    "copyright": "Todos os direitos reservados."
   },
   "views": {
     "user": {
-      "profile": "User Profile",
-      "following": "Following"
+      "profile": "Perfil de usuário",
+      "following": "Segue"
     }
   },
   "measurement": {
